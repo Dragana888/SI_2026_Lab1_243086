@@ -93,6 +93,9 @@ class Library {
 
     // TODO: Implement in branch feature-genre-report
     public void printBooksByGenre(String genre) {
+        for(Book book : books){
+            System.out.println(book.toString());
+        }
     }
 
     public int countAvailableBooks() {
@@ -127,5 +130,6 @@ public class SI2026Lab1Main {
         System.out.println("Check for The Hobbit: "+library.searchBookByTitle("The Hobbit"));
         System.out.println("Check for Animal Farm: "+library.searchBookByTitle("Animal Farm"));
 
+        library.printBooksByGenre("Programming");
     }
 }
